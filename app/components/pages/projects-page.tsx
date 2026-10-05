@@ -1,5 +1,5 @@
 import Footer from 'app/components/footer'
-import { Navbar } from 'app/components/nav'
+import { SiteHeader } from 'app/components/nav'
 import { Projects } from 'app/components/projects'
 import { JsonLd } from 'app/components/json-ld'
 import { content } from 'app/lib/content'
@@ -29,13 +29,15 @@ export function ProjectsPage({ locale }: { locale: Locale }) {
   return (
     <div
       lang={lang}
-      className="flex-auto min-w-0 mx-4 mt-8 flex flex-col px-2 md:px-0 max-w-xl sm:mx-auto"
+      className="content-frame mx-auto flex w-full max-w-[600px] flex-col"
     >
       <JsonLd data={schema} />
-      <Navbar locale={locale} />
+      <SiteHeader locale={locale} />
       <section>
-        <h1 className="font-semibold text-2xl mb-4 tracking-tighter">{t.h1}</h1>
-        <p className="mb-8 text-neutral-700 dark:text-neutral-300">{t.intro}</p>
+        <h1 className="mb-4 text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.02em] text-heading">
+          {t.h1}
+        </h1>
+        <p className="mb-[1.45rem] text-nav">{t.intro}</p>
         <Projects locale={locale} />
       </section>
       <Footer />

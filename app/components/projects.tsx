@@ -1,15 +1,18 @@
+import Link from "next/link"
 import { formatDate } from "app/utils/formatDate"
 import { content } from "app/lib/content"
 import { projects, type Project } from "app/lib/projects"
 import { locales, type Locale } from "app/lib/site"
-import Link from "next/link"
 
 const UTM_BASE = "utm_source=portifolio&utm_medium=site&campaign=seemyprojects"
 
-function withUtm(url: string): string {
+export function withUtm(url: string): string {
   const date = new Date().toISOString().split("T")[0]
   return `${url}?${UTM_BASE}&utm_content=${date}`
 }
+
+const rowDateClass =
+  "text-sm font-ui tabular-nums whitespace-nowrap text-nav max-sm:w-fit"
 
 function ProjectRow({
   project,
@@ -25,35 +28,24 @@ function ProjectRow({
   const resolvedHref = href ? withUtm(href) : undefined
   const present = content[locale].projects.present
   const dateRange = endDate
-    ? `${formatDate(startDate, false, intl)} - ${formatDate(endDate, false, intl)}`
-    : `${formatDate(startDate, false, intl)} - ${present}`
+    ? `${formatDate(startDate, false, intl)} – ${formatDate(endDate, false, intl)}`
+    : `${formatDate(startDate, false, intl)} – ${present}`
 
   const body = (
-    <div className="w-full flex flex-col gap-1">
-      <div className="w-full flex max-sm:flex-col flex-row space-x-0 sm:space-x-2">
-        <p className="text-neutral-600 dark:text-neutral-400 w-[160px] min-w-20 tabular-nums">
+    <div className="border-b border-line py-[0.72em]">
+      <div className="flex items-baseline justify-between gap-x-5 max-sm:flex-col max-sm:gap-y-[0.15rem]">
+        <span className="text-copy">{label}</span>
+        <time dateTime={startDate} className={rowDateClass}>
           {dateRange}
-        </p>
-        <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-          {label}
-        </p>
+        </time>
       </div>
       {description && (
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 sm:ml-[168px]">
-          {description}
-        </p>
+        <p className="mb-0 mt-1 text-sm text-nav">{description}</p>
       )}
       {tags && tags.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 sm:ml-[168px]">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs px-2 py-0.5 rounded-full border border-neutral-300 text-neutral-600 dark:border-neutral-700 dark:text-neutral-400"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <p className="mb-0 mt-1 text-[13px] font-ui text-nav">
+          {tags.join(" · ")}
+        </p>
       )}
     </div>
   )
@@ -63,7 +55,12 @@ function ProjectRow({
   }
 
   return (
-    <Link target="_blank" rel="noopener noreferrer" href={resolvedHref}>
+    <Link
+      target="_blank"
+      rel="noopener noreferrer"
+      href={resolvedHref}
+      className="no-underline"
+    >
       {body}
     </Link>
   )
@@ -71,7 +68,7 @@ function ProjectRow({
 
 function ProjectList({ list, locale }: { list: Project[]; locale: Locale }) {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="dim-list border-t border-line">
       {list.map((project) => (
         <ProjectRow key={project.label} project={project} locale={locale} />
       ))}
@@ -86,7 +83,7 @@ export function Projects({ locale = "en" }: { locale?: Locale }) {
   return (
     <>
       <ProjectList list={featured} locale={locale} />
-      <h2 className="mb-5 mt-10 text-xl font-semibold tracking-tighter">
+      <h2 className="mt-[3.1rem] mb-[1.2rem] text-[1.45rem] font-semibold leading-[1.4] tracking-[-0.02em] text-heading">
         {content[locale].projects.earlierTitle}
       </h2>
       <ProjectList list={earlier} locale={locale} />

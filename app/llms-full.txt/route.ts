@@ -50,15 +50,17 @@ Languages: English (this file), Brazilian Portuguese at ${baseUrl}/pt
 
 ## Home — ${baseUrl}
 
-${home.h1}
+${siteConfig.name} — ${home.title}
 
 ${home.intro}
-
-### ${home.whatIDoTitle}
 
 ${home.whatIDo}
 
 ${home.whatIDoSecond}
+
+${home.currently}
+
+${home.cta}
 
 ### ${home.stackTitle}
 
@@ -66,9 +68,9 @@ ${home.whatIDoSecond}
 - ${home.stackCrmLabel}: ${skills.marketingCloud.join(', ')}
 - ${home.stackEngineeringLabel}: ${skills.engineering.join(', ')}
 
-### ${home.currentlyTitle}
+### ${home.certificationsTitle}
 
-${home.currently}
+${certificationLines}
 
 ## About — ${baseUrl}/about
 

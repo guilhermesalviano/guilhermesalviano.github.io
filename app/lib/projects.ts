@@ -13,16 +13,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    label: "agent-crm - AI Agent for CRM Teams",
-    startDate: "2026-09-03",
-    description:
-      "AI agent for CRM and marketing teams: a terminal UI over OpenRouter LLMs with tool calling for Gmail and campaign analytics — open rates, segment trends and read-only SQL over newsletter data — and hot-reloaded markdown skills.",
-    descriptionPt:
-      "Agente de IA para times de CRM e marketing: interface de terminal sobre LLMs via OpenRouter com chamada de ferramentas para Gmail e analytics de campanhas — taxas de abertura, tendências por segmento e SQL somente leitura sobre dados de newsletter — e skills em markdown recarregadas em tempo real.",
-    tags: ["TypeScript", "Bun", "OpenRouter", "LLM agents", "Tool calling"],
-    featured: true,
-  },
-  {
     href: "https://imkoris.com",
     label: "Koris - An AI Assistant",
     startDate: "2026-05-15",
@@ -45,17 +35,6 @@ export const projects: Project[] = [
     tags: ["Node.js", "Docker", "Docker Compose"],
   },
   {
-    href: "https://github.com/guilhermesalviano/koaris-url-shortener",
-    label: "URL Shortener",
-    startDate: "2025-05-03",
-    endDate: "2025-09-20",
-    description:
-      "Multi-service URL shortener with auth, click analytics, and blog integration; deployed on Vercel with AWS DynamoDB provisioned via Terraform.",
-    descriptionPt:
-      "Encurtador de URL multi-serviço com autenticação, analytics de cliques e integração com blog; publicado na Vercel com AWS DynamoDB provisionado via Terraform.",
-    tags: ["Next.js", "TypeScript", "DynamoDB", "Terraform", "AWS"],
-  },
-  {
     href: "https://koaris.com/",
     label: "Koaris Tools",
     featured: true,
@@ -71,19 +50,12 @@ export const projects: Project[] = [
     href: "https://github.com/guilhermesalviano/koaris-auth",
     label: "Koaris Auth",
     startDate: "2024-11-05",
+    endDate: "2025-06-11",
     description:
       "Authentication service built with clean architecture — role-based access control and token management, deployable via Docker, Serverless, or ECS.",
     descriptionPt:
       "Serviço de autenticação construído com clean architecture — controle de acesso baseado em papéis e gestão de tokens, publicável via Docker, Serverless ou ECS.",
     tags: ["TypeScript", "Node.js", "Prisma", "Vite", "Vitest", "Docker", "Terraform"],
-  },
-  {
-    href: "https://github.com/koaris",
-    label: "Koaris",
-    startDate: "2023-08-05",
-    description: "Umbrella organization for the Koaris ecosystem (Auth, Tools, Bloom-ui).",
-    descriptionPt:
-      "Organização guarda-chuva do ecossistema Koaris (Auth, Tools, Bloom-ui).",
   },
   {
     href: "https://koaris.github.io/bloom-ui/",
@@ -96,35 +68,15 @@ export const projects: Project[] = [
     tags: ["TypeScript", "React"],
   },
   {
-    href: "https://github.com/guilhermesalviano/smaug-preco-do-poder",
-    label: "Visual Novel - Preço do poder",
-    startDate: "2023-08-24",
-    endDate: "2023-11-27",
-    description:
-      "Branching-narrative visual novel with multiple story paths, built with a small team (writing, art, sound).",
-    descriptionPt:
-      "Visual novel de narrativa ramificada com múltiplos caminhos de história, feita com uma equipe pequena (roteiro, arte e som).",
-    tags: ["Python", "Ren'Py"],
-  },
-  {
-    href: "https://github.com/guilhermesalviano/ekko-project",
-    label: "Platform game - Ekko",
-    startDate: "2022-04-01",
-    endDate: "2022-07-26",
-    description:
-      "2D pixel-art horror/suspense game demo inspired by Dead Space, built solo.",
-    descriptionPt:
-      "Demo de jogo 2D em pixel art de terror/suspense inspirado em Dead Space, feito sozinho.",
-    tags: ["Construct 2", "Aseprite"],
-  },
-  {
     label: "Graphyk",
     startDate: "2020-06-18",
     endDate: "2021-10-20",
+    description: "Developed a file submission and management platform for a printing company, serving 100+ daily users and processing hundreds of files per day, including large print-ready files. The platform streamlined file delivery and improved the overall printing workflow.",
+    descriptionPt: "Desenvolvimento de uma plataforma de envio e gerenciamento de arquivos para uma gráfica, utilizada por mais de 100 usuários diariamente e responsável pelo processamento de centenas de arquivos por dia, incluindo arquivos de grande porte para impressão. A solução simplificou o envio de materiais e otimizou o fluxo de produção gráfica.",
   },
   {
     href: "https://github.com/guilhermesalviano/messenger-clone",
-    label: "POC in React Native - Messenger Clone",
+    label: "Message App",
     startDate: "2020-08-14",
     endDate: "2020-08-20",
     description:

@@ -6,31 +6,31 @@ import { certifications, skills, type Locale } from './site'
  */
 export const content = {
   en: {
-    nav: { home: 'home', projects: 'projects', about: 'about' },
+    nav: { projects: 'projects', about: 'about' },
     switchLocale: 'português',
     home: {
       title: 'AI Developer & Salesforce Marketing Cloud Specialist',
       description:
         'Guilherme Salviano — freelance AI Developer and Salesforce Marketing Cloud specialist for MarTech: LLM agents, AMPscript, SSJS, Journey Builder and custom activities. Based in Brazil.',
-      h1: 'Guilherme Salviano — AI Developer & Salesforce Marketing Cloud Specialist',
+      bioLabel: 'Bio',
+      bioDefault: 'Default',
+      bioLong: 'Long',
       intro:
         "Hi! You can call me Guibs. I'm a freelance AI Developer and a certified Salesforce Marketing Cloud specialist, working in marketing technology since 2018.",
-      whatIDoTitle: 'What I do',
       whatIDo:
         'I build AI agents and LLM-powered features for CRM and marketing teams: agents that call tools, keep memory between conversations, and answer questions straight from campaign data — open rates, segment trends, day-over-day performance — instead of waiting on a report.',
       whatIDoSecond:
         'On the MarTech side I work in Salesforce Marketing Cloud: AMPscript and server-side JavaScript for dynamic content, customer journeys in Journey Builder, full-stack custom activities, data extensions and SQL, Automation Studio, and API integrations that connect Marketing Cloud to the rest of the stack.',
-      stackTitle: 'Tech I work with',
+      currently:
+        'Freelancing on AI and Salesforce Marketing Cloud projects, building Koris — an autonomous AI assistant framework — and agent-crm, an AI agent for CRM teams, and studying Internet Systems at Descomplica.',
+      cta: 'Need an AI agent or a Marketing Cloud build? I’m available for freelance projects — let’s talk.',
+      stackTitle: 'Stack',
       stackAiLabel: 'AI & LLMs',
       stackCrmLabel: 'MarTech: Salesforce Marketing Cloud',
       stackEngineeringLabel: 'Software engineering',
       certificationsTitle: 'Certifications',
-      currentlyTitle: 'Currently',
-      currently:
-        'Freelancing on AI and Salesforce Marketing Cloud projects, building Koris — an autonomous AI assistant framework — and agent-crm, an AI agent for CRM teams, and studying Internet Systems at Descomplica.',
-      cta: 'Need an AI agent or a Marketing Cloud build? I’m available for freelance projects — let’s talk.',
-      seeProjects: 'See my projects',
-      readAbout: 'More about me',
+      projectsTitle: 'Projects',
+      allProjects: 'All projects',
     },
     about: {
       title: 'About',
@@ -75,31 +75,31 @@ export const content = {
     breadcrumbHome: 'Home',
   },
   pt: {
-    nav: { home: 'início', projects: 'projetos', about: 'sobre' },
+    nav: { projects: 'projetos', about: 'sobre' },
     switchLocale: 'english',
     home: {
       title: 'Desenvolvedor de IA & Especialista em Salesforce Marketing Cloud',
       description:
         'Guilherme Salviano — Desenvolvedor de IA freelancer e especialista em Salesforce Marketing Cloud para MarTech: agentes com LLM, AMPscript, SSJS, Journey Builder e custom activities. Brasil.',
-      h1: 'Guilherme Salviano — Desenvolvedor de IA & Especialista em Salesforce Marketing Cloud',
+      bioLabel: 'Bio',
+      bioDefault: 'Padrão',
+      bioLong: 'Completa',
       intro:
         'Olá! Pode me chamar de Guibs. Sou Desenvolvedor de IA freelancer e especialista certificado em Salesforce Marketing Cloud, trabalhando com tecnologia de marketing desde 2018.',
-      whatIDoTitle: 'O que eu faço',
       whatIDo:
         'Construo agentes de IA e funcionalidades com LLM para times de CRM e marketing: agentes que usam ferramentas, guardam memória entre conversas e respondem direto a partir dos dados de campanha — taxas de abertura, tendências por segmento, desempenho dia a dia — sem esperar por um relatório.',
       whatIDoSecond:
         'Na parte de MarTech trabalho com Salesforce Marketing Cloud: AMPscript e JavaScript server-side para conteúdo dinâmico, jornadas de cliente no Journey Builder, custom activities full-stack, data extensions e SQL, Automation Studio e integrações via API que conectam o Marketing Cloud ao restante da stack.',
-      stackTitle: 'Tecnologias que uso',
+      currently:
+        'Atuando como freelancer em projetos de IA e Salesforce Marketing Cloud, construindo o Koris — um framework de assistente de IA autônomo — e o agent-crm, um agente de IA para times de CRM, e estudando Sistemas para Internet na Descomplica.',
+      cta: 'Precisa de um agente de IA ou de um projeto em Marketing Cloud? Estou disponível para freelas — vamos conversar.',
+      stackTitle: 'Stack',
       stackAiLabel: 'IA & LLMs',
       stackCrmLabel: 'MarTech: Salesforce Marketing Cloud',
       stackEngineeringLabel: 'Engenharia de software',
       certificationsTitle: 'Certificações',
-      currentlyTitle: 'Atualmente',
-      currently:
-        'Atuando como freelancer em projetos de IA e Salesforce Marketing Cloud, construindo o Koris — um framework de assistente de IA autônomo — e o agent-crm, um agente de IA para times de CRM, e estudando Sistemas para Internet na Descomplica.',
-      cta: 'Precisa de um agente de IA ou de um projeto em Marketing Cloud? Estou disponível para freelas — vamos conversar.',
-      seeProjects: 'Ver meus projetos',
-      readAbout: 'Mais sobre mim',
+      projectsTitle: 'Projetos',
+      allProjects: 'Todos os projetos',
     },
     about: {
       title: 'Sobre',

@@ -1,5 +1,4 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
 import { JsonLd } from './components/json-ld'
 import { personSchema, websiteSchema } from './lib/schema'
 import { allSkills, baseUrl, siteConfig } from './lib/site'
@@ -83,18 +82,12 @@ export const metadata: Metadata = {
   },
 }
 
-const geistSans = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist-sans',
-})
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
-})
-
-const cx = (...classes: (string | undefined | null | false)[]) =>
-  classes.filter(Boolean).join(' ')
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#1b1a19' },
+  ],
+}
 
 export default function RootLayout({
   children,
@@ -102,17 +95,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
-        geistSans.variable,
-        geistMono.variable
-      )}
-    >
+    <html lang="en">
       <body className="antialiased">
         <JsonLd data={[personSchema, websiteSchema]} />
-        <main>{children}</main>
+        <main className="min-h-svh p-[clamp(1.25rem,3.4vw,3.25rem)] max-sm:px-5 max-sm:pt-10 max-sm:pb-5">
+          {children}
+        </main>
       </body>
     </html>
   )

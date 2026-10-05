@@ -67,6 +67,25 @@ export const skills = {
 
 export const allSkills: string[] = [...skills.ai, ...skills.marketingCloud, ...skills.engineering]
 
+/**
+ * Short stack list shown on the home page — grouped, high level. The full
+ * `skills` lists stay in the about page, JSON-LD and meta keywords.
+ */
+export const stack = [
+  'AI agents & LLMs',
+  'Salesforce Marketing Cloud',
+  'AMPscript & SSJS',
+  'Journey Builder',
+  'SQL',
+  'TypeScript',
+  'Node.js',
+  'Go',
+  'React & Next.js',
+  'AWS',
+  'Docker & Terraform',
+  'Segment',
+]
+
 export type Certification = {
   name: string
   issuer: string
